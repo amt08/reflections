@@ -1,0 +1,7 @@
+What happens when you initialise a repository? Why do you need to do it?
+- files that are in the directory are tracked
+- an empty history of the changes the files are going through is initialised
+- creating the repo => means that all the files in the directory you want to be tracked together, but separately from other files in other directories
+
+- if you didn't create the repo, git could create the directory to save the versions in automatically, but it wouldn't know which files you want to track together and which you want to track separately
+
