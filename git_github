@@ -1,0 +1,86 @@
+- good rule of thumb is to make a commit per logical change
+- if you fixed a typo, then fixed a bug in a separate part of the file, you should use one commit for each change since they are logically separate. If you do this, each commit will have one purpose that can be easily understood
+
+#####################################
+
+git - version control system
+GitHub - version control platform
+
+README file:
+ - what the project does
+ - authors maybe
+ - how to use it 
+ - software version specifications, OS
+ - other libraries versions
+ - specific installations that need to be done
+
+ ####################################
+
+ - a collection of files = a repository
+ - when you make a commit, you will save a version of every file in the repo. even if the file is not changed at all? yes!
+
+ ####################################
+
+ - create a clone of the repository:
+ 		git clone (url to other repo)
+
+ ####################################
+
+ - Git Errors - 
+
+ - 'Should not be doing an octopus'
+ 		- octopus = combine different versions of code together
+
+ - 'You are in 'detached HEAD' state'
+ 		- HEAD = the commit you are currently on
+ 		- you can detach the HEAD by switching to a previous commit
+ 		- more like a warning than an error
+
+#####################################
+
+- commit = snapshot of the repository
+
+- we use git checkout to restore to a previous version
+- if you are in the checkout state with the 'detached HEAD' warning and you are making changes to your files without being attached to your current state, there is a possibility to create a new branch and save all the new changes there, but without affecting the current state of your files:
+	- git checkout -b new_branch_name
+
+- if you are in a detached HEAD state and reverted to an earlier branch and you do git log, the logs will be done up to the branch you reverted to. To be able to see the newer commits but still being on the old branch, will say git checkout commit_id
+- git checkout id is also used for checking out to an earlier version
+
+#######################################
+
+- to check the content of a file : vim name_of_file, where vim as an editor for files
+- to exit the vim mode ':x'
+
+#######################################
+
+- move to home directory is  cd ~
+- move file and save it to another location mv path/to/file path/to/new_file_name
+
+########################################
+
+- Behaviour of git checkout - commit changes
+
+1. Checking out an earlier commit will change the state of at least one file
+
+- sometimes true
+- git doesn't allow you to save a new commit if no files have been updated, however:
+	- you can save a commit (commit 1), update some files sand save another commit (commit 2) and change all the files back to their state during commit 1 (commit 3)  => none of the files will be changed
+
+2. Checking out an earlier commit will change the state of more than one file
+3. Checking out an earlier commit will change the state of every file in the repo
+
+- sometimes true
+- each commit tracks the state of all files in the repo, but:
+	a) check out earlier commit could change the state of multiple files or of all the files
+	b) check out new commit after changing one file => one file will change
+
+4. After checking out a commit, the state of all the files in the repo will be from the same point in time
+
+- always true
+- commit = snapshot of all files in the repo at the time the commit was made
+- check out an earlier commit = all the files are reverted to their state at the time the commit was made
+
+##########################################
+
+ls -a = display all files (including hidden ones) e.g. the ones starting with '.'
