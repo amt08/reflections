@@ -1,0 +1,32 @@
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+- if you have one version that works and the other one that doesn't, the difference between them will be higlighted (changes occured in the meantime and the bug shows up) and then you could go directly to say 3 chunks of code to check what breaks, rather than go through all the file
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+- could reverse to previous versions of a file easily
+- could branch an earlier version of a file with a later development / new branch
+- track the progress of the development easily
+- if you need some code snippet that was used in old version, you don't have to rewrite the code
+- look up history if file has been left for quite a while and go back to it after some time and things don't make sense
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google docs does?
+- Pros 
+	- could introduce messages to a manual commit associated with the version of the file
+	- can easily find versions to roll back
+- Cons 
+	- lose changed data if user doesn't commit
+	- log may become too clutered if user commit too often
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+- generally files are linked together and if 3 files are changed and only one has the changes commited and the other 2 (by mistake) are not commited, the version associated with the change is incorrect and cannot refer back to the changed when the 3 files were changed at once
+- in programming one logical change comes with multiple file change, so that one can save entire working project rather than single individual file
+
+How can you use the commands git log and git diff to view the history of files?
+
+use git log to see commit list and brings back the ids associated with the commit
+use git diff 1st_id 2nd_id to view specific commit
+
+How might using version control make you more confident to make changes that could break something?
+- could always reverse back to working version
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
