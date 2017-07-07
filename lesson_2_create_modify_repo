@@ -1,0 +1,39 @@
+- run git init to create a new repository
+- when a new repo is created Git doesn't create any commits for you. Reasons:
+		- when you create the repo you might not want to include everything in there
+		- not able to write your 1st commit message
+- git status = shows which files have changed
+
+Working Directory -> Staging Area -> Repository
+
+- instead of using git commit to keep track of sttaus of files (add files) into the repo all in one go, you have a staging area where you can add files one at a time, according to their logical change. When you are ready to commit, Git bundles the files from the staging area to be sent to the repo
+
+###########################
+- when you commit the changes, by using git commit, Git opens the editor that you chose to allow you to write a commit message
+- could also specify the message by running git commit -m "Commit message"
+
+- Style guide - 
+
+- message = 3 parts: type, body (optional), footer (optional)
+
+- type:
+	- feat: new feature
+	- fix: a bug fix
+	- docs: changes to documentation
+	- style: formatting, missing semi colons; no code change
+	- refactor: refactoring production code
+	- test: adding tests, refactoring test; no production code change
+	- chore: updating build tasks, package manager configs; no production code change
+
+- subject:
+	- no greater than 50 chars, should begin with a capital letter and do not end with period
+	- imperative one to describe what a commit does, rather than what it did
+
+- body:
+	- optional, only if commit requires explanation
+	- use it to explain what + why, not how
+	- each line < 72 chars
+	- blank line between title and body
+
+- footer: 
+	- optional, used to reference issue tracker IDs
